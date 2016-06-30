@@ -7,7 +7,7 @@ from __future__ import print_function
 
 try:
     from configparser import RawConfigParser
-except:
+except ImportError:
     from ConfigParser import ConfigParser
 from argparse import ArgumentParser
 from pprint import pprint
