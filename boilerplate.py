@@ -9,7 +9,7 @@ try:
     from configparser import RawConfigParser
 except ImportError:
     from ConfigParser import ConfigParser
-from argparse import ArgumentParser
+from argparse import ArgumentParser, FileType
 from pprint import pprint
 from sys import exit, stderr
 
@@ -29,6 +29,13 @@ parser.add_argument(
     dest='verbose',
     help='Verbose output, use more v\'s to increase level'
 )
+
+# If you want to supply an optional configuration file
+#parser.add_argument(
+#    '-c', '--configuration',
+#    type=FileType('r'),
+#    help='Configuration with siptrack connection credentials'
+#)
 
 def main():
     print('Boilerplate')
